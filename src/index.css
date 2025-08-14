@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ring: 59 130 246;
+}
+
+/* small utility to style cards/buttons quickly */
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl px-3 py-2 text-sm font-medium transition border shadow-sm;
+}
+.btn-outline { @apply bg-white border-slate-200 hover:bg-slate-50; }
+.btn-default { @apply bg-slate-900 text-white border-slate-900 hover:bg-slate-800; }
+.card { @apply rounded-2xl border border-slate-200 bg-white shadow-sm; }
+.card-header { @apply p-4 md:p-5 border-b border-slate-100; }
+.card-title { @apply text-lg font-semibold; }
+.card-content { @apply p-4 md:p-5; }
+.badge { @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs border; }
+.badge-default { @apply bg-slate-900 text-white border-slate-900; }
+.badge-secondary { @apply bg-slate-100 text-slate-700 border-slate-200; }
+.badge-outline { @apply bg-white text-slate-700 border-slate-300; }
+.badge-destructive { @apply bg-red-600 text-white border-red-600; }
+.table { @apply w-full text-sm; }
+.table th, .table td { @apply p-3 border-b border-slate-200; }
+.input { @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-sky-500; }
+.textarea { @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-sky-500; }
+.select { @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-sky-500; }
+.dialog-backdrop { @apply fixed inset-0 bg-black/30; }
+.dialog-panel { @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-xl max-h-[90vh] overflow-auto w-[90vw] md:w-[800px]; }
+.tabs-list { @apply grid w-full gap-2 bg-slate-100 rounded-xl p-1; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tabs-trigger { @apply rounded-lg px-3 py-2 text-sm text-slate-600 data-[active=true]:bg-white data-[active=true]:text-slate-900; }
